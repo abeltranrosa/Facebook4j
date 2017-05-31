@@ -44,19 +44,19 @@ public class Autorizacion {
 
    
     public static void buscarPost() throws FacebookException {
-        ResponseList<Post> results = facebook.getPosts(JOptionPane.showInputDialog(null, "Introduce la palabra clave para buscar los post"));
+        ResponseList<Post> results = facebook.getPosts(JOptionPane.showInputDialog(null, "busca los post"));
 
         System.out.println(results.toString());
     }
 
     public static void buscarFeed() throws FacebookException {
-        ResponseList<Post> noticia = facebook.getFeed(JOptionPane.showInputDialog("Introduce la palabra clave a buscar"));
+        ResponseList<Post> noticia = facebook.getFeed(JOptionPane.showInputDialog("busca noticias"));
         System.out.println(noticia.toString());
     }
 
   
     public static void comentario() throws FacebookException {
-        facebook.commentPhoto(JOptionPane.showInputDialog("Introduce el ID de la foto "), JOptionPane.showInputDialog(" Introduce el comentario  "));
+        facebook.commentPhoto(JOptionPane.showInputDialog("foto id "), JOptionPane.showInputDialog("coments"));
     }
 
    
